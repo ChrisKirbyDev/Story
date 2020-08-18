@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <script>
+            function computerPlay() {
+                let possibleOutcomes = ['rock', 'paper', 'scissors'];
+                let randomAnswer = Math.floor(Math.random()*possibleOutcomes.length);
+                return possibleOutcomes[randomAnswer].toUpperCase();
+            }
+
+            function playRound() {
+                const computerSelection = computerPlay();
+                let playerSelection = prompt('rock', 'paper', 'scissors')
+
+                if (computerSelection === playerSelection) {
+                    return 'Your draw cunt';
+                } else if (computerSelection === 'rock' && playerSelection === 'paper') {
+                    return 'Winna Winna Chicken Dinner';
+                } else if (computerSelection === 'paper' && playerSelection === 'scissors') {
+                    return 'Winna Winna Chicken Dinner';
+                } else if (computerSelection === 'scissors' && playerSelection === 'rock') {
+                    return 'Winna Winna Chicken Dinner';
+                } else if (computerSelection === 'paper' && playerSelection === 'rock') {
+                    return 'Winna Winna Chicken Dinner';
+                } else if (computerSelection === 'rock' && playerSelection === 'scissors') {
+                    return 'Facking losa cunt';
+                } else {
+                    return 'You did something wrong.';
+                }
+            }
+        
+        
+        </script>
+    </body>
+</html>
