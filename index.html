@@ -7,32 +7,20 @@
 </head>
     <body>
         <script>
-            function computerPlay() {
-                let possibleOutcomes = ['rock', 'paper', 'scissors'];
-                let randomAnswer = Math.floor(Math.random()*possibleOutcomes.length);
-                return possibleOutcomes[randomAnswer].toUpperCase();
-            }
-
-            function playRound() {
-                const computerSelection = computerPlay();
-                let playerSelection = prompt('rock', 'paper', 'scissors')
-
-                if (computerSelection === playerSelection) {
-                    return 'Your draw cunt';
-                } else if (computerSelection === 'rock' && playerSelection === 'paper') {
-                    return 'Winna Winna Chicken Dinner';
-                } else if (computerSelection === 'paper' && playerSelection === 'scissors') {
-                    return 'Winna Winna Chicken Dinner';
-                } else if (computerSelection === 'scissors' && playerSelection === 'rock') {
-                    return 'Winna Winna Chicken Dinner';
-                } else if (computerSelection === 'paper' && playerSelection === 'rock') {
-                    return 'Winna Winna Chicken Dinner';
-                } else if (computerSelection === 'rock' && playerSelection === 'scissors') {
-                    return 'Facking losa cunt';
-                } else {
-                    return 'You did something wrong.';
+            function book(title) {
+                this.title = "The Hobbit"
+                this.author = "J.R.R. Tolkein"
+                this.pages = "295 pages"
+                this.read = "not read yet"
+                this.info = function () {
+                    return this.title + " by " + this.author + ", " + this.pages + ", " + this.read
                 }
             }
+
+            const theHobbit = new book ("The Hobbit")
+
+            console.log(theHobbit.info());
+
         
         
         </script>
