@@ -1,28 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-    <body>
-        <script>
-            function book(title) {
-                this.title = "The Hobbit"
-                this.author = "J.R.R. Tolkein"
-                this.pages = "295 pages"
-                this.read = "not read yet"
-                this.info = function () {
-                    return this.title + " by " + this.author + ", " + this.pages + ", " + this.read
-                }
-            }
-
-            const theHobbit = new book ("The Hobbit")
-
-            console.log(theHobbit.info());
-
-        
-        
-        </script>
-    </body>
+  </head>
+  <body>
+    <script>
+      function computerPlay() {
+        let possibleOutcomes = ["rock", "paper", "scissors"];
+        let randomAnswer = Math.floor(Math.random() * possibleOutcomes.length);
+        return possibleOutcomes[randomAnswer].toUpperCase();
+      }
+    </script>
+  </body>
 </html>
